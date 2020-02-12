@@ -13,35 +13,20 @@ class LandingPage extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 40.0,
-                  color: Colors.white),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20.0),
               child: Text(
                 "Start Scoring your matches on Ballebaaz today",
-                style: TextStyle(fontSize: 16.0, color: Colors.white),
+                style: TextStyle(fontSize: 16.0),
               ),
             ),
-            Row(
-              children: <Widget>[
-                MaterialButton(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  onPressed: () {},
-                  child: Row(
-                    children: <Widget>[
-                      IconButton(icon: Icon(Icons.get_app), onPressed: null),
-                      Text(
-                        "Download on the AppStore",
-                        style: TextStyle(color: Colors.red),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: MaterialButton(
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  MaterialButton(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
@@ -50,14 +35,34 @@ class LandingPage extends StatelessWidget {
                       children: <Widget>[
                         IconButton(icon: Icon(Icons.get_app), onPressed: null),
                         Text(
-                          "Download on the PlayStore",
+                          "Download on the AppStore",
                           style: TextStyle(color: Colors.red),
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MaterialButton(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(
+                              Radius.circular(20.0))),
+                      onPressed: () {},
+                      child: Row(
+                        children: <Widget>[
+                          IconButton(icon: Icon(Icons.get_app),
+                              onPressed: null),
+                          Text(
+                            "Download on the PlayStore",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
@@ -82,8 +87,11 @@ class LandingPage extends StatelessWidget {
             children: pageChildren(constraints.biggest.width/2),
           );
         } else {
-          return Column(
-            children: pageChildren(constraints.biggest.width),
+          return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Column(
+              children: pageChildren(constraints.biggest.width),
+            ),
           );
         }
       },
