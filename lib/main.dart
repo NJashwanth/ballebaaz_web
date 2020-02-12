@@ -1,5 +1,6 @@
 import 'package:ballebaaz_web/Nav_bar.dart';
 import 'package:ballebaaz_web/bottompage.dart';
+import 'package:ballebaaz_web/howToUseText.dart';
 import 'package:ballebaaz_web/utilities.dart';
 import 'package:flutter/material.dart';
 
@@ -47,30 +48,25 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               NavBar(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: LandingPage(),
               ),
 
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: DownloadInfo(),
               ),
+              /* Padding(
+                padding: const EdgeInsets.symmetric(vertical:40.0,horizontal: 60.0),
+                child: HowToUse(),
+              )*/
             ],
           ),
-          /*child: Column(
-            children: <Widget>[
-              NavBar(),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-                child: LandingPage(),
-              ),
-              DownloadInfo(),
-            ],
-          ),*/
+
         ),
       ),
     );

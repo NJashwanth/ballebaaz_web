@@ -4,21 +4,19 @@ import 'package:flutter/material.dart';
 class DownloadInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          getColumn("987", "ACTIVE USERS"),
-          getSizedBox(),
-          getColumn("987", "ACTIVE USERS"),
-          getSizedBox(),
-          getColumn("987", "ACTIVE USERS"),
-          getSizedBox(),
-          getColumn("987", "ACTIVE USERS"),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisSize: MainAxisSize.max,
+      children: <Widget>[
+        getColumn("987", "ACTIVE USERS"),
+        getSizedBox(),
+        getColumn("987", "ACTIVE USERS"),
+        getSizedBox(),
+        getColumn("987", "ACTIVE USERS"),
+        getSizedBox(),
+        getColumn("987", "ACTIVE USERS"),
 
-        ],
-      ),
+      ],
     );
   }
 
@@ -26,7 +24,10 @@ class DownloadInfo extends StatelessWidget {
     return Column(
       children: <Widget>[
         getText(title),
-        getText(subtitle)
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: getText(subtitle),
+        )
       ],
     );
   }
