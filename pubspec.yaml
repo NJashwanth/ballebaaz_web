@@ -45,6 +45,8 @@ flutter:
     - assets/banner.png
     - assets/banner@2x.png
     - assets/banner@3x.png
+    - assets/ptrn_c@2x.png
+    - assets/service_mobiles@3x.png
 
 
 

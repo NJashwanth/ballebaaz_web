@@ -1,6 +1,8 @@
 import 'package:ballebaaz_web/Nav_bar.dart';
 import 'package:ballebaaz_web/bottompage.dart';
 import 'package:ballebaaz_web/howToUseText.dart';
+import 'package:ballebaaz_web/how_this_app_work.dart';
+import 'package:ballebaaz_web/other_features.dart';
 import 'package:ballebaaz_web/utilities.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          /* decoration: BoxDecoration(
+          /*decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
@@ -60,10 +62,21 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: DownloadInfo(),
               ),
-              /* Padding(
-                padding: const EdgeInsets.symmetric(vertical:40.0,horizontal: 60.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 40.0),
                 child: HowToUse(),
-              )*/
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 40.0),
+                child: OtherFeatures(),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 30.0, horizontal: 40.0),
+                child: AppWorking(),
+              )
             ],
           ),
 
