@@ -1,9 +1,11 @@
 import 'package:ballebaaz_web/Nav_bar.dart';
+import 'package:ballebaaz_web/app_ui_visuals.dart';
 import 'package:ballebaaz_web/bottompage.dart';
+import 'package:ballebaaz_web/company_details.dart';
 import 'package:ballebaaz_web/howToUseText.dart';
 import 'package:ballebaaz_web/how_this_app_work.dart';
 import 'package:ballebaaz_web/other_features.dart';
-import 'package:ballebaaz_web/utilities.dart';
+import 'package:ballebaaz_web/reviews.dart';
 import 'package:flutter/material.dart';
 
 import 'DownloadsInfo.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ballebaaz',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.white,
           /*decoration: BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.centerLeft,
@@ -57,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: LandingPage(),
               ),
-
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
                 child: DownloadInfo(),
@@ -76,10 +78,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.symmetric(
                     vertical: 30.0, horizontal: 40.0),
                 child: AppWorking(),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 30.0, horizontal: 40.0),
+                child: AppUIVisuals(),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 30.0, horizontal: 40.0),
+                child: Reviews(),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    vertical: 30.0, horizontal: 40.0),
+                child: CompanyDetails(),
               )
             ],
           ),
-
         ),
       ),
     );
