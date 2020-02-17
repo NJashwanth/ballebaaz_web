@@ -30,7 +30,8 @@ class AppUIVisuals extends StatelessWidget {
   Widget getTitleWidget() {
     return Text(
       "Single & Beautiful User Interface",
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+      style: TextStyle(
+          fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.white),
     );
   }
 

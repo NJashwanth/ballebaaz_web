@@ -94,9 +94,7 @@ class MobileNavBar extends StatelessWidget {
         children: <Widget>[
           Text(
             "Ballebaaz",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -135,10 +133,11 @@ class MobileNavBar extends StatelessWidget {
                   ),
                   MaterialButton(
                     onPressed: () {},
-                    child: getText(
+                    child: Text(
                       "DOWNLOAD",
+                      style: TextStyle(color: Colors.white),
                     ),
-                    color: Colors.pink,
+                    color: Colors.red,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(20.0))),
                   )
