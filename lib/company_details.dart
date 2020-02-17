@@ -5,18 +5,21 @@ class CompanyDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      return Container(
-        color: Colors.black,
-        width: constraints.maxWidth,
-        child: Flex(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          direction: Axis.horizontal,
-          children: <Widget>[
-            getCompanyAddress(),
-            getCommunicationColumn(),
-            getFeaturesColumn(),
-            getOtherDetails()
-          ],
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Container(
+          color: Colors.black,
+          width: constraints.maxWidth,
+          child: Flex(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            direction: Axis.horizontal,
+            children: <Widget>[
+              getCompanyAddress(),
+              getCommunicationColumn(),
+              getFeaturesColumn(),
+              getOtherDetails()
+            ],
+          ),
         ),
       );
     });
@@ -38,7 +41,7 @@ class CompanyDetails extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("Sector 82A Noida\nUttar Pradesh 201309",
+            child: Text("Kakatiya Nagar Malkajgiri\nTelangana 500056",
                 style: TextStyle(fontSize: 12.0, color: Colors.white)),
           ),
           Padding(

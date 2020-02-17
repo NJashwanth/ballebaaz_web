@@ -76,10 +76,11 @@ class DeskTopNavBar extends StatelessWidget {
   Widget getButton() {
     return MaterialButton(
       onPressed: () {},
-      child: getText(
+      child: Text(
         "DOWNLOAD",
+        style: TextStyle(color: Colors.white),
       ),
-      color: Colors.pink,
+      color: Colors.red,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20.0))),
     );

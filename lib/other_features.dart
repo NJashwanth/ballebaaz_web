@@ -52,9 +52,11 @@ class OtherFeatures extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        getTitle(Icons.youtube_searched_for, "Live Scores"),
-        getMatter(
-            "uyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB")
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: getTitle(Icons.youtube_searched_for, "Live Scores"),
+        ),
+        getMatter("Lives Scores will be appeared Here")
       ],
     );
   }
@@ -63,9 +65,11 @@ class OtherFeatures extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        getTitle(Icons.add_comment, "Tournaments"),
-        getMatter(
-            "uyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB")
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: getTitle(Icons.add_comment, "Tournaments"),
+        ),
+        getMatter("You can Check out Tournament Details Here")
       ],
     );
   }
@@ -74,9 +78,11 @@ class OtherFeatures extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        getTitle(Icons.attach_file, "Insights"),
-        getMatter(
-            "uyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB\nuyfgsdugsefuiogkashdusgdfkdhiuabgB")
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: getTitle(Icons.attach_file, "Insights"),
+        ),
+        getMatter("Check Insights Here")
       ],
     );
   }

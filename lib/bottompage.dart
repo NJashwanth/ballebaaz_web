@@ -1,4 +1,10 @@
+import 'package:ballebaaz_web/Url_launch_helper.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
+
+
+
 
 class LandingPage extends StatelessWidget {
   List<Widget> pageChildren(double width) {
@@ -25,46 +31,20 @@ class LandingPage extends StatelessWidget {
                   style: TextStyle(fontSize: 16.0),
                 ),
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+              MaterialButton(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                onPressed: () {},
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    MaterialButton(
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(
-                              Radius.circular(20.0))),
-                      onPressed: () {},
-                      child: Row(
-                        children: <Widget>[
-                          IconButton(icon: Icon(Icons.get_app),
-                              onPressed: null),
-                          Text(
-                            "Download on the AppStore",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: MaterialButton(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                                Radius.circular(20.0))),
-                        onPressed: () {},
-                        child: Row(
-                          children: <Widget>[
-                            IconButton(icon: Icon(Icons.get_app),
-                                onPressed: null),
-                            Text(
-                              "Download on the PlayStore",
-                              style: TextStyle(color: Colors.red),
-                            ),
-                          ],
-                        ),
-                      ),
+                    IconButton(
+                        icon: Icon(Icons.get_app),
+                        onPressed: () => onClicked()),
+                    Text(
+                      "Download on the PlayStore",
+                      style: TextStyle(color: Colors.red),
                     ),
                   ],
                 ),
@@ -88,7 +68,7 @@ class LandingPage extends StatelessWidget {
         if (constraints.maxWidth > 800) {
           return Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: pageChildren(constraints.biggest.width/2),
+            children: pageChildren(constraints.biggest.width / 2),
           );
         } else {
           return Column(
@@ -98,5 +78,10 @@ class LandingPage extends StatelessWidget {
         }
       },
     );
+  }
+
+  onClicked() {
+    html.window.open("https://play.google.com/store/apps/details?id=com.ballebaaz.ballebaaz&hl=en_IN","launch");
+
   }
 }

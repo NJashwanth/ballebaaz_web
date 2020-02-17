@@ -61,7 +61,14 @@ class _ReviewsState extends State<Reviews> {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(),
+            child: CircleAvatar(
+              backgroundColor: Colors.red,
+              child: IconButton(
+                color: Colors.white,
+                onPressed: () {},
+                icon: Icon(Icons.person_pin),
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),

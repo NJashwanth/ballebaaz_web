@@ -10,12 +10,11 @@ class DownloadInfo extends StatelessWidget {
       children: <Widget>[
         getColumn("987", "ACTIVE USERS"),
         getSizedBox(),
-        getColumn("987", "ACTIVE USERS"),
+        getColumn("9999+", "TOTAL DOWNLOADS"),
+        getSizedBox(),
+        getColumn("40+", "TEAMS EVERYDAY"),
         getSizedBox(),
         getColumn("987", "ACTIVE USERS"),
-        getSizedBox(),
-        getColumn("987", "ACTIVE USERS"),
-
       ],
     );
   }

@@ -1,3 +1,4 @@
+import 'package:ballebaaz_web/Download_option.dart';
 import 'package:ballebaaz_web/Nav_bar.dart';
 import 'package:ballebaaz_web/app_ui_visuals.dart';
 import 'package:ballebaaz_web/bottompage.dart';
@@ -6,6 +7,7 @@ import 'package:ballebaaz_web/howToUseText.dart';
 import 'package:ballebaaz_web/how_this_app_work.dart';
 import 'package:ballebaaz_web/other_features.dart';
 import 'package:ballebaaz_web/reviews.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'DownloadsInfo.dart';
@@ -84,16 +86,32 @@ class _MyHomePageState extends State<MyHomePage> {
                     vertical: 30.0, horizontal: 40.0),
                 child: AppUIVisuals(),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 30.0, horizontal: 40.0),
-                child: Reviews(),
+              Stack(
+                overflow: Overflow.clip,
+                fit: StackFit.loose,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 30.0, horizontal: 40.0),
+                        child: Reviews(),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 30.0, left: 40.0, right: 40.0),
+                        child: CompanyDetails(),
+                      ),
+                    ],
+                  ),
+                  Positioned(
+                    child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 210.0, left: 40.0, right: 40.0),
+                        child: DownloadOption()),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 30.0, horizontal: 40.0),
-                child: CompanyDetails(),
-              )
             ],
           ),
         ),
